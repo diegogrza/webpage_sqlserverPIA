@@ -24,8 +24,5 @@
         <img src="logos/fondo2.gif" alt="Imagen Fija">
     </div>
 
-    <footer>
-        &copy; <?php echo date("Y"); ?> Los Santos Customs. Todos los derechos reservados.
-    </footer>
 </body>
 </html>
