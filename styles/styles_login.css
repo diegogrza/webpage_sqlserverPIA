@@ -1,0 +1,113 @@
+body {
+  margin: 0;
+  padding: 0;
+  position: relative; 
+}
+
+@font-face {
+  font-family: 'pricedown';
+  src: url('../fuentes/pricedown.ttf') format('truetype');
+}
+
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+
+}
+
+.background::after {
+  content: "";
+  background-image: url("../logos/fondo.gif");
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  animation: animatedBackground 10s infinite;
+  z-index: -1; /* Agrega esto */
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+  z-index: 1; 
+}
+
+
+.login-form {
+  font-family: 'pricedown', Arial, sans-serif;
+  background-color: rgba(0, 0, 0, 0.7); 
+  padding: 40px;
+  border-radius: 8px;
+  text-align: center;
+  border: none;
+  box-shadow: none;
+}
+
+
+.login-form h1 {
+  color: #ff3b3b;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  color: #fff;
+  margin-bottom: 6px;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border-radius: 4px;
+  border: none;
+  background-color: #383838;
+  color: #fff;
+}
+
+button {
+  background-color: #ff3b3b;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #d62828;
+}
+
+@keyframes animatedBackground {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 100% 0;
+  }
+   100% {
+    background-position: 0 0;
+  }
+}
+
+
